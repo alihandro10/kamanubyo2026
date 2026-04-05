@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamanubyo2026 | Geleceğin Akademik Vizyonu</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root { --primary-color: #0d6efd; --dark-bg: #0f172a; }
+        body { font-family: 'Poppins', sans-serif; overflow-x: hidden; background-color: #f8f9fa; }
+
+        /* --- 1. PRELOADER ANIMASYONU --- */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--dark-bg); display: flex; justify-content: center;
+            align-items: center; z-index: 9999; transition: opacity 0.8s ease;
+        }
+        .loader {
+            width: 50px; height: 50px; border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color); border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* --- 2. HERO TASARIMI --- */
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.7)), 
+                        url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400');
+            background-size: cover; background-attachment: fixed;
+            display: flex; align-items: center; color: white; position: relative;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 40px;
+        }
+
+        /* --- 3. BÖLÜM KARTLARI --- */
+        .feature-card {
+            border: none; border-radius: 20px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden; cursor: pointer;
+        }
+        .feature-card:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .icon-box {
+            width: 70px; height: 70px; background: rgba(13, 110, 253, 0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px; color: var(--primary-color); font-size: 1.8rem;
+        }
+
+        /* Float Animasyonu */
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="text-center text-white">
+            <div class="loader mb-3 mx-auto"></div>
+            <h4 class="fw-light">kamanubyo2026 hazırlanıyor...</h4>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">KAMAN<span class="text-primary">UBYO</span></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link px-3" href="#vizyon">Vizyon</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#bolumler">Bölümler</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-lg-3 rounded-pill text-white" href="#iletisim">Kayıt Ol</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="glass-card">
+                        <h1 class="display-3 fw-bold mb-3">Kaman'da Gelecek <br> 
+                            <span id="typed" class="text-primary"></span>
+                        </h1>
+                        <p class="lead opacity-75 mb-4">#kamanubyo2026 ile modern eğitimin sınırlarını zorlayın. Dijital dönüşüm ve uygulamalı bilimlerde yeni nesil eğitim modeli.</p>
+                        <div class="d-flex gap-3">
+                            <button onclick="celebrate()" class="btn btn-primary btn-lg rounded-pill px-4 shadow">Hemen Keşfet</button>
+                            <a href="#vizyon" class="btn btn-outline-light btn-lg rounded-pill px-4">Daha Fazla Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="vizyon" class="py-5 bg-white overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800" class="img-fluid rounded-5 shadow-lg floating" alt="Eğitim">
+                </div>
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                    <span class="badge bg-primary-subtle text-primary mb-2 px-3 py-2 rounded-pill">2026 HEDEFLERİ</span>
+                    <h2 class="display-5 fw-bold mb-4">Yeni Nesil Üniversite Deneyimi</h2>
+                    <p class="text-muted">Kaman Uygulamalı Bilimler Yüksekokulu olarak, kamanubyo2026 stratejimizle öğrencileri sadece diplomaya değil, gerçek sektör deneyimine hazırlıyoruz.</p>
+                    <div class="row g-3 mt-2">
+                        <div class="col-6"><i class="bi bi-cpu text-primary"></i> Yapay Zeka Laboratuvarı</div>
+                        <div class="col-6"><i class="bi bi-globe text-primary"></i> Global Staj İmkanları</div>
+                        <div class="col-6"><i class="bi bi-mortarboard text-primary"></i> %100 Uygulamalı Eğitim</div>
+                        <div class="col-6"><i class="bi bi-cup-hot text-primary"></i> Modern Gastronomi Atölyesi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bolumler" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Akademik Birimlerimiz</h2>
+                <p class="text-muted">Kaman'da kariyerinize yön verecek popüler bölümler</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card h-100 feature-card p-4 shadow-sm">
+                        <div class="icon-box mx-auto"><i class="bi bi-database-fill"></i></div>
+                        <h4 class="fw-bold">YBS</h4>
+                        <p class="text-muted small">Bilişim ve işletme dünyasının köprüsü. Veri analitiği ve yönetim odaklı gelecek.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card h-100 feature-card p-4 shadow-sm bg-primary text-white">
+                        <div class="icon-box mx-auto bg-white"><i class="bi bi-fire text-primary"></i></div>
+                        <h4>Gastronomi</h4>
+                        <p class="small opacity-75">Geleneksel lezzetleri moleküler mutfakla birleştiren profesyonel şef eğitimi.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card h-100 feature-card p-4 shadow-sm">
+                        <div class="icon-box mx-auto"><i class="bi bi-terminal-fill"></i></div>
+                        <h4 class="fw-bold">Bilgisayar</h4>
+                        <p class="text-muted small">Siber güvenlikten oyun geliştirmeye kadar geniş bir teknik yelpaze.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="iletisim" class="py-5 bg-dark text-white text-center">
+        <div class="container" data-aos="fade-up">
+            <h3 class="fw-bold">kamanubyo2026</h3>
+            <p class="opacity-50">Kırşehir Ahi Evran Üniversitesi'nin Parlayan Yıldızı</p>
+            <div class="mt-4">
+                <a href="#" class="btn btn-outline-light rounded-circle mx-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn btn-outline-light rounded-circle mx-2"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="small">&copy; 2026 Kaman UBYO. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        // AOS Animasyon Başlatma
+        AOS.init({ duration: 1000, once: true });
+
+        // Preloader Kaldırma
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => { preloader.style.display = 'none'; }, 800);
+        });
+
+        // Typed.js Yazı Efekti
+        var typed = new Typed('#typed', {
+            strings: ['Dijitalleşiyor.', 'Gelişiyor.', 'Seni Bekliyor.'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        });
+
+        // Konfeti Efekti (Butona Basınca)
+        function celebrate() {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+
+        // Navbar Scroll Efekti
+        window.onscroll = function() {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 100) {
+                nav.style.background = "#0f172a";
+                nav.style.padding = "10px 0";
+            } else {
+                nav.style.background = "transparent";
+                nav.style.padding = "20px 0";
+            }
+        };
+    </script>
+</body>
+</html>
